@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "СтройКонтроль",
+    "slug": "stroykontrol",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0F0F0F"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.stroykontrol.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Приложению нужен доступ к камере для фото отчетов",
+        "NSPhotoLibraryUsageDescription": "Приложению нужен доступ к фото для прикрепления к отчетам"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0F0F0F"
+      },
+      "package": "com.stroykontrol.app",
+      "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-haptics",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Приложению нужен доступ к фото для отчетов",
+          "cameraPermission": "Приложению нужен доступ к камере для фото отчетов"
+        }
+      ],
+      [
+        "expo-sharing",
+        {
+          "sharingPermission": "Для отправки отчетов заказчику"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "stroykontrol-belarus"
+      }
+    },
+    "owner": "stroykontrol",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/stroykontrol-belarus"
+    }
+  }
+}

@@ -44,3 +44,5 @@ export const CURRENCY = 'BYN';
 export const CURRENCY_SYMBOL = 'BYN';
 export const DATE_FORMAT = 'dd.MM.yyyy';
 export const DATETIME_FORMAT = 'dd.MM.yyyy HH:mm';
+
+export { TAX_REGIMES, PROJECT_STATUSES, WORKER_ROLES, WEATHER_OPTIONS, MATERIAL_UNITS } from '@/types';

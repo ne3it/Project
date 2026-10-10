@@ -16,5 +16,5 @@ export function Providers({ children }: { children: ReactNode }) {
   const [isReady, setIsReady] = useState(false);
   useEffect(() => { async function prepare() { try { await Font.loadAsync({ 'Inter': require('../assets/fonts/Inter-Regular.ttf'), 'Inter-Medium': require('../assets/fonts/Inter-Medium.ttf'), 'Inter-SemiBold': require('../assets/fonts/Inter-SemiBold.ttf'), 'Inter-Bold': require('../assets/fonts/Inter-Bold.ttf') }); await SplashScreen.hideAsync(); setIsReady(true); } catch (e) { console.error('App preparation error:', e); setIsReady(true); } } prepare(); }, []);
   if (!isReady) return null;
-  return <AppContext.Provider value={{ isReady, setReady }}>{children}</AppContext.Provider>;
+  return <AppContext.Provider value={{ isReady, setReady: setIsReady }}>{children}</AppContext.Provider>;
 }
